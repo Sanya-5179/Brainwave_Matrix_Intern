@@ -1,0 +1,173 @@
+// Patient class
+class Patient {
+    private String name;
+    private String email;
+    private String phone;
+
+    public Patient(String name, String email, String phone) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    // Getters and setters
+}
+
+// Doctor class
+class Doctor {
+    private String name;
+    private String specialization;
+
+    public Doctor(String name, String specialization) {
+        this.name = name;
+        this.specialization = specialization;
+    }
+
+    // Getters and setters
+}
+
+// Appointment class
+class Appointment {
+    private Patient patient;
+    private Doctor doctor;
+    private String date;
+    private String time;
+
+    public Appointment(Patient patient, Doctor doctor, String date, String time) {
+        this.patient = patient;
+        this.doctor = doctor;
+        this.date = date;
+        this.time = time;
+    }
+
+    // Getters and setters
+}
+
+// ElectronicHealthRecord class
+class ElectronicHealthRecord {
+    private Patient patient;
+    private String medicalHistory;
+    private String currentMedication;
+
+    public ElectronicHealthRecord(Patient patient, String medicalHistory, String currentMedication) {
+        this.patient = patient;
+        this.medicalHistory = medicalHistory;
+        this.currentMedication = currentMedication;
+    }
+
+    // Getters and setters
+}
+
+// Bill class
+class Bill {
+    private Patient patient;
+    private double amount;
+    private String paymentMethod;
+
+    public Bill(Patient patient, double amount, String paymentMethod) {
+        this.patient = patient;
+        this.amount = amount;
+        this.paymentMethod = paymentMethod;
+    }
+
+    // Getters and setters
+}
+
+// InventoryItem class
+class InventoryItem {
+    private String name;
+    private int quantity;
+    private double price;
+
+    public InventoryItem(String name, int quantity, double price) {
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    // Getters and setters
+}
+
+// StaffMember class
+class StaffMember {
+    private String name;
+    private String role;
+
+    public StaffMember(String name, String role) {
+        this.name = name;
+        this.role = role;
+    }
+
+    // Getters and setters
+}
+
+public class HospitalManagementSystem {
+    private List<Patient> patients;
+    private List<Doctor> doctors;
+    private List<Appointment> appointments;
+    private List<ElectronicHealthRecord> electronicHealthRecords;
+    private List<Bill> bills;
+    private List<InventoryItem> inventoryItems;
+    private List<StaffMember> staffMembers;
+
+    public HospitalManagementSystem() {
+        this.patients = new ArrayList<>();
+        this.doctors = new ArrayList<>();
+        this.appointments = new ArrayList<>();
+        this.electronicHealthRecords = new ArrayList<>();
+        this.bills = new ArrayList<>();
+        this.inventoryItems = new ArrayList<>();
+        this.staffMembers = new ArrayList<>();
+    }
+
+    // Methods for patient registration, appointment scheduling, EHR management, billing, inventory management, and staff management
+    public void registerPatient(Patient patient) {
+        patients.add(patient);
+    }
+
+    public void scheduleAppointment(Appointment appointment) {
+        appointments.add(appointment);
+    }
+
+    public void createEHR(ElectronicHealthRecord ehr) {
+        electronicHealthRecords.add(ehr);
+    }
+
+    public void generateBill(Bill bill) {
+        bills.add(bill);
+    }
+
+    public void manageInventory(InventoryItem item) {
+        inventoryItems.add(item);
+    }
+
+    public void addStaffMember(StaffMember staffMember) {
+        staffMembers.add(staffMember);
+    }
+
+    public static void main(String[] args) {
+        HospitalManagementSystem hms = new HospitalManagementSystem();
+
+        // Create patients
+        Patient patient1 = new Patient("John Doe", "johndoe@example.com", "1234567890");
+        Patient patient2 = new Patient("Jane Doe", "janedoe@example.com", "0987654321");
+
+        // Register patients
+        hms.registerPatient(patient1);
+        hms.registerPatient(patient2);
+
+        // Create doctors
+        Doctor doctor1 = new Doctor("Dr. Smith", "Cardiology");
+        Doctor doctor2 = new Doctor("Dr. Johnson", "Oncology");
+
+        // Create appointments
+        Appointment appointment1 = new Appointment(patient1, doctor1, "2024-03-16", "10:00 AM");
+        Appointment appointment2 = new Appointment(patient2, doctor2, "2024-03-17", "11:00 AM");
+
+        // Schedule appointments
+        hms.scheduleAppointment(appointment1);
+        hms.scheduleAppointment(appointment2);
+
+        // Create EHRs
+        ElectronicHealthRecord ehr1 = new ElectronicHealthRecord(patient1, "Hyp
+
